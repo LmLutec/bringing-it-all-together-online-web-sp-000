@@ -65,6 +65,7 @@ class Dog
     sql = "SELECT * FROM dogs WHERE name = ?"
     dog = DB[:conn].execute(sql, name)
     dog.flatten
+    binding.pry 
     self.new_from_db(dog)
   end 
   
