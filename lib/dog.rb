@@ -61,7 +61,7 @@ class Dog
   end 
   
   def self.find_by_name(name)
-    binding.pry 
+    #binding.pry 
     sql = "SELECT name FROM dogs WHERE name = '#{name}' "
     dog = DB[:conn].execute(sql)
     dog[0][0]
