@@ -64,7 +64,8 @@ class Dog
    # binding.pry 
     sql = "SELECT * FROM dogs WHERE name = ?"
     dog = DB[:conn].execute(sql, name)
-    dog[0][0]
+    dog.flatten
+    self.new_from_db(dog)
   end 
   
   def update
