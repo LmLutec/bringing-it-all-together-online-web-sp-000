@@ -61,11 +61,9 @@ class Dog
   end 
   
   def self.find_by_name(name)
-   # binding.pry 
     sql = "SELECT * FROM dogs WHERE name = ?"
     dog = DB[:conn].execute(sql, name)
     dog = dog.flatten
-    #binding.pry 
     self.new_from_db(dog)
   end 
   
