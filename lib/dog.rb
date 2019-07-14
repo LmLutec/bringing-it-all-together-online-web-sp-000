@@ -62,7 +62,7 @@ class Dog
   
   def self.find_by_name(name)
     #binding.pry 
-    sql = "SELECT * FROM dogs WHERE name = ? LIMIT 1"
+    sql = "SELECT * FROM dogs WHERE name = ?"
     dog = DB[:conn].execute(sql)
 
   end 
